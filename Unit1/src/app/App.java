@@ -2,21 +2,22 @@ package app;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        for (int a = 22; a <= 28; a = a + 3){
-           System.out.println(a);
+        for (int i = 22; i <= 28; i = i + 3){
+           System.out.println(i);
         }
-        for (int b = 2; b <= 32; b = b * 2){
-            System.out.println(b);
+        for (int i = 2; i <= 32; i = i * 2){
+            System.out.println(i);
         }
-        for (int c = 3; c >= -81; c = c * -c){
-            System.out.println(c);
+        for (int i = 3; i >= -81; i = i * -i){
+            System.out.println(i);
         }
-        for (int d = 50; d >= 5; d = d -5){
-            System.out.println(d);
+        for (int i = 50; i >= 5; i = i -5){
+            System.out.println(i);
         }
-        for (int e = 0; e <= 5; e = e + 1){
-            System.out.println(e * 2);
-            System.out.println(e);
+        for (int i = 1; i <= 9; i = i + 1){
+            System.out.println(i * i);
+            System.out.println(i + 3);
+            System.out.println(i);
         }
 
     }
