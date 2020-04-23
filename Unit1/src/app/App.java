@@ -2,26 +2,23 @@ package app;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        
-        for (int i = 20; i >= 1; i--){
-            System.out.println(i);
-            if (i == 10){
-                for (int j = 10; j > 3; j--){
-                    System.out.println(i);
-                }
-            }
-        }
-        System.out.println("End first loop");
+        String person1 = "Adam ";
+        String verb1 = "golf";
+        String person2 = "Jack";
+        String verb2 = "talk ";
+        String verb3 = "shop ";
+        String food = "tacos ";
+        String dayOfWeek = "Tuesday ";
+        String place1 = "home ";
+        String place2 = "game store ";
+        String adjective1 = "amazing ";
+        String adjective2 = "huge ";
 
-        System.out.println("Start second loop");
-        for (int i = 0; i < 37; i = i + 4){
-            System.out.println(i);
-            if (i % 12 == 0){
-                System.out.println("Hey!");
-            }
-        }
-        System.out.println("End second loop");
-    
+        System.out.println(person1 + "is a programmer who likes to " + verb1 + ".");
+        System.out.println("Every " + dayOfWeek + "they make a " + adjective1 + food + "for breakfast and " + verb2 + "at " + place1 + "with " + person2 + ".");
+        System.out.println("Sometimes, they go to the " + adjective2 + place2 + "with " + person2 + " so that they can " + verb3 + "togehter.");
+
+     
 
     }
 }
