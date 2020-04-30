@@ -7,13 +7,10 @@ public class App {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Password ");
-        String password = input.nextLine();
-
-        if (password.equals("183726073")){
-            System.out.println("ACCESS GRANTED");
+        System.out.println(">What is the count?");
+        int count = input.nextInt();
+        for (int n = 1; n <= count; n++){
+            System.out.println(">" + n);
         }
-        else
-        System.out.println("ACCESS DENIED");
     }
 }
