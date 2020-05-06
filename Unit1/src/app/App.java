@@ -15,10 +15,6 @@ public class App {
         Scanner input8 = new Scanner(System.in);
         Scanner input9 = new Scanner(System.in);
         Scanner input10 = new Scanner(System.in);
-        Scanner input11 = new Scanner(System.in);
-        Scanner input12 = new Scanner(System.in);
-        Scanner input13 = new Scanner(System.in);
-        Scanner input14 = new Scanner(System.in);
 
         System.out.println("Please enter a name.");
         String name = input.nextLine();
@@ -37,7 +33,7 @@ public class App {
 
         System.out.println("Please enter a noun");
         String noun2 = input5.nextLine();
-        
+
         System.out.println("Please enter a adjective");
         String adjective4 = input6.nextLine();
 
@@ -50,12 +46,16 @@ public class App {
         System.out.println("Please enter a verb");
         String verb3 = input9.nextLine();
 
+        System.out.println("Please enter a food");
+        String food = input10.nextLine();
+
         System.out.println("Yesterday " + name + " and I went to the park.");
         System.out.println("On our way to the " + adjective1 + " park, we saw a " + adjective2 + " " + noun1 + " on a bike.");
         System.out.println("We also saw big " + adjective3 + " balloons tied to a " + noun2 + ".");
         System.out.println("Once we got to the " + adjective1 + " park, the sky turned " + adjective4 + ".");
         System.out.println("It started to " + verb1 + " and " + verb2 + ".");
         System.out.println(name + " and I " + verb3 + " all the way home.");
+        System.out.println("Once we got home " + name + " and I made some " + food + ".");
         System.out.println("Tomorrow we will try to go to the " + adjective1 + " park again and hope it dosen't " + verb1 + ".");
     }
 }
