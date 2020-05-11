@@ -19,16 +19,16 @@ public class App {
         int function = input3.nextInt();
 
         if (function == 1) {
-            System.out.println(number1 + " * " + number2 + " = " + number1 * number2);
+            System.out.println(number1 + " * " + number2 + " = " + (number1 * number2));
         }
         if (function == 2) {
-            System.out.println(number1 + " / " + number2 + " = " + number1 / number2);
+            System.out.println(number1 + " / " + number2 + " = " + (number1 / number2));
         }
         if (function == 3) {
              System.out.println(number1 + " - " + number2 + " = " + (number1 - number2));
         }
         if (function == 4) {
-            System.out.println(number1  + " + " + number2 + " = " + number1 + number2);
+            System.out.println(number1  + " + " + number2 + " = " + (number1 + number2));
         }
     }
 }
