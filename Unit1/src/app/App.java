@@ -3,32 +3,43 @@ package app;
 import java.util.Scanner;
 
 public class App {
+
+
     public static void main(String[] args) throws Exception {
 
+        Dog dog1 = new Dog();
+        Dog dog2 = new Dog();
+        Dog dog3 = new Dog();
+
         Scanner input = new Scanner(System.in);
-        Scanner input2 = new Scanner(System.in);
-        Scanner input3 = new Scanner(System.in);
 
-        System.out.println("Enter a number");
-        int number1 = input.nextInt();
+        dog1.name = "Beau";
+        dog1.breed = "British Labrador";
+        dog1.age = 6;
 
-        System.out.println("Enter another number");
-        int number2 = input2.nextInt();
+        dog2.name = "Zeus";
+        dog2.breed = "German Shepherd";
+        dog2.age = 3;
 
-        System.out.println("Please choose 1 for *, 2 for /, 3 for -, 4 for +");
-        int function = input3.nextInt();
+        dog3.name = "Geno";
+        dog3.breed = "Shiba Inu";
+        dog3.age = 1;
 
-        if (function == 1) {
-            System.out.println(number1 + " * " + number2 + " = " + (number1 * number2));
-        }
-        if (function == 2) {
-            System.out.println(number1 + " / " + number2 + " = " + (number1 / number2));
-        }
-        if (function == 3) {
-             System.out.println(number1 + " - " + number2 + " = " + (number1 - number2));
-        }
-        if (function == 4) {
-            System.out.println(number1  + " + " + number2 + " = " + (number1 + number2));
-        }
+
+        System.out.println("Dog 1");
+        System.out.println("name: " + dog1.name);
+        System.out.println("breed: " + dog1.breed);
+        System.out.println("age: " + dog1.age);
+
+        System.out.println("Dog 2");
+        System.out.println("name: " + dog2.name);
+        System.out.println("breed: " + dog2.breed);
+        System.out.println("age: " + dog2.age);
+        
+        System.out.println("Dog 3");
+        System.out.println("name: " + dog3.name);
+        System.out.println("breed: " + dog3.breed);
+        System.out.println("age: " + dog3.age);
+
     }
 }
