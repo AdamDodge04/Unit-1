@@ -7,58 +7,74 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        Dog dog1 = new Dog();
-        Dog dog2 = new Dog();
-        Dog dog3 = new Dog();
+               Scanner input = new Scanner(System.in);
 
-        Scanner input = new Scanner(System.in);
+        System.out.println("What is your name");
+        String username1 = input.next() + input.nextLine();
 
-        dog1.name = "Beau";
-        dog1.breed = "British Labrador";
-        dog1.age = 6;
-        dog1.favFood = "Pork";
-        dog1.height = 22;
-        dog1.favActivity = "Running";
+        System.out.println("How much money are you starting with");
+        int money = input.nextInt();
 
-        dog2.name = "Zeus";
-        dog2.breed = "German Shepherd";
-        dog2.age = 3;
-        dog2.favFood = "Ice Cream";
-        dog2.height = 24;
-        dog2.favActivity = "Fetch";
+        System.out.println("Please create password");
+        String pass1 = input.next() + input.nextLine();
 
+        System.out.println("Account created, please log in");
 
-        dog3.name = "Geno";
-        dog3.breed = "Shiba Inu";
-        dog3.age = 1;
-        dog3.favFood = "Pizza";
-        dog3.height = 18;
-        dog3.favActivity = "Walks";
+        System.out.println("Enter your username");
 
+        String username2 = input.next() + input.nextLine();
 
-        System.out.println("Dog 1");
-        System.out.println("name: " + dog1.name);
-        System.out.println("breed: " + dog1.breed);
-        System.out.println("age: " + dog1.age);
-        System.out.println("Favorite Food: " + dog1.favFood);
-        System.out.println("Height (in): " + dog1.height);
-        System.out.println("Favorite Activity: " + dog1.favActivity);
+        System.out.println("Enter your password");
 
-        System.out.println("Dog 2");
-        System.out.println("name: " + dog2.name);
-        System.out.println("breed: " + dog2.breed);
-        System.out.println("age: " + dog2.age);
-        System.out.println("Favorite Food: " + dog2.favFood);
-        System.out.println("Height (in): " + dog2.height);
-        System.out.println("Favorite Activity: " + dog2.favActivity);
-        
-        System.out.println("Dog 3");
-        System.out.println("name: " + dog3.name);
-        System.out.println("breed: " + dog3.breed);
-        System.out.println("age: " + dog3.age);
-        System.out.println("Favorite Food: " + dog3.favFood);
-        System.out.println("Height (in): " + dog3.height);
-        System.out.println("Favorite Activity: " + dog3.favActivity);
+        String pass2 = input.next() + input.nextLine();
+
+        if (pass2.equals(pass1)) {
+            System.out.println("Access granted, welcome " + username1);
+
+            int state = 1;
+            while (state == 1) {
+                System.out.println("What would you like to do? Press 1 to check balance, press 2 to withdraw money, press 3 to deposit money, press 4 to logout");
+
+                int selection = input.nextInt();
+                if (selection == 1) {
+                    System.out.println("You have " + money);
+                } 
+                
+                else if (selection == 2) {
+                    System.out.println("You currently have " + money);
+                    System.out.println("How much would you like to withdraw?");
+                    int withdraw = input.nextInt();
+                    
+                    if (withdraw > money) {
+                        System.out.println("insufficient funds");
+                    } 
+                    
+                    else {
+                        money = money - withdraw;
+                    }
+
+                    System.out.println("You withdrew " + withdraw + " dollars, your current balance is now " + money);
+                } 
+                else if (selection == 3) {
+                    System.out.println("You currently have " + money);
+                    System.out.println("How much would you like to deposit");
+                    int deposit = input.nextInt();
+                    money = money + deposit;
+                    System.out.println("You now have " + money);
+                } 
+
+                else if (selection == 4) {
+                    state = 0;
+                    break;
+                } 
+
+                else {
+                    System.out.println("Invalid selection, try again");
+                }
+
+            }
+        } else
+            System.out.println("Access Denied");
 
     }
 }
